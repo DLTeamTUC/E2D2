@@ -1,0 +1,82 @@
+# =============================================================================
+# E2D2 — .gitignore
+# =============================================================================
+
+# --- Project-specific ---
+# Generated at runtime by the notebook; figures/tables/CSVs are produced
+# by Cells 6.1 - 7.2. The committed notebook already contains rendered
+# outputs, so the directory does not need to be tracked.
+E2D2_outputs/
+e2d2_outputs/
+
+# Local copies of the preprocessed datasets (large; see data/README.md)
+CICDDoS2019/
+CICIoT2023/
+5GNIDD/
+*.csv
+!E2D2_outputs/tables/*.csv  # never matches because the dir is ignored, kept for clarity
+
+# Saved models / checkpoints
+*.pt
+*.pth
+*.ckpt
+*.h5
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+pip-wheel-metadata/
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Test / coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+
+# Type checkers
+.mypy_cache/
+.pyre/
+.pytype/
+
+# --- Editors / IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# --- OS ---
+.Trash-*
+.fuse_hidden*
+
+# --- Local credentials / secrets (precaution; nothing should ever be here) ---
+.env
+.env.*
+*.pem
+*.key
+secrets/
